@@ -1,0 +1,101 @@
+<mvc:View
+    controllerName="app.customers.newproject.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+    <SplitApp
+        id="app1"
+        initialDetail="detail"
+        initialMaster="master">
+
+        <detailPages>
+            <App id="app"></App>
+        </detailPages>
+        <masterPages>
+
+            <Page
+                id="master"
+                backgroundDesign="List"
+                title="N a v i g a t i o n"
+            >
+
+                <List id="_IDGenList">
+                    <StandardListItem id="_IDGenStandardListItem1" title="Dashboard"
+                        type="Active"
+                        icon="sap-icon://bbyd-dashboard"
+                        press="goToDash" />
+                    <StandardListItem id="_IDGenStandardListItem" title="Products"
+                        type="Navigation"
+                        icon="sap-icon://product"
+                        press=".onPressGoToMasterProducts" />
+                    <StandardListItem id="_IDGenStandardListItem22" title="Customers"
+                        type="Navigation"
+                        icon="sap-icon://customer-view"
+                        press=".onPressGoToMasterCustomers" />
+                    <StandardListItem id="_IDGenStandardListItem23" title="Orders"
+                        type="Navigation"
+                        icon="sap-icon://sales-order-item"
+                        press=".onPressGoToMasterOrders" />
+                </List>
+            </Page>
+            <Page
+                id="products"
+                title="Products"
+                backgroundDesign="List"
+                showNavButton="true"
+                navButtonPress=".onPressMasterBack">
+                <List id="_IDGenList1" itemPress=".onListItemPress">
+                    <items>
+
+                        <StandardListItem id="_IDGenStandardListItem2" title="Details"
+                            type="Active" custom:to="detailDetail" press=".goToProductsTable"
+                            icon="sap-icon://chart-table-view"
+                        />
+                    </items>
+                    <items>
+                        <StandardListItem id="_IDGenStandardListItem211" title="Statistics"
+                            type="Active" custom:to="detailDetail" press=".goToProductsChart"
+                            icon="sap-icon://business-objects-experience" />
+
+                    </items>
+                </List>
+            </Page>
+            <Page
+                id="customers"
+                title="Customers"
+                backgroundDesign="List"
+                showNavButton="true"
+                navButtonPress=".onPressMasterBack">
+                <List id="_IDGenList2" itemPress=".onListItemPress">
+                    <items>
+                        <StandardListItem id="_IDGenStandardListItem12" title="Details"
+                            type="Active" custom:to="detail" press=".goToCustomersTable"
+                            icon="sap-icon://chart-table-view" />
+
+                    </items>
+                    <items>
+                        <StandardListItem id="_IDGenStandardListItem1222" title="Statistics"
+                            type="Active" custom:to="detail" press=".goToCustomersChart"
+                            icon="sap-icon://business-objects-experience" />
+
+                    </items>
+                </List>
+            </Page>
+            <Page
+                id="orders"
+                title="Orders"
+                backgroundDesign="List"
+                showNavButton="true"
+                navButtonPress=".onPressMasterBack">
+                <List id="_IDGenList22" itemPress=".onListItemPress">
+                    <items>
+                        <StandardListItem id="_IDGenStandardListItem122" title="Details"
+                            type="Active" custom:to="detail" press=".goToOrdersTable" />
+
+                    </items>
+                </List>
+            </Page>
+
+        </masterPages>
+    </SplitApp>
+</mvc:View>

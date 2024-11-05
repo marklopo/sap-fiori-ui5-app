@@ -1,0 +1,50 @@
+[
+  {
+    "Country": "USA",
+    "Number of customers": 47
+  },
+  {
+    "Country": "UK",
+    "Number of customers": 44
+  },
+  {
+    "Country": "Germany",
+    "Number of customers": 32
+  },
+  {
+    "Country": "France",
+    "Number of customers": 30
+  },
+  {
+    "Country": "Canada",
+    "Number of customers": 28
+  },
+  {
+    "Country": "Brazil",
+    "Number of customers": 27
+  },
+  {
+    "Country": "Denmark",
+    "Number of customers": 17
+  },
+  {
+    "Country": "Italy",
+    "Number of customers": 16
+  },
+  {
+    "Country": "Argentina",
+    "Number of customers": 15
+  },
+  {
+    "Country": "Mexico",
+    "Number of customers": 14
+  },
+  {
+    "Country": "Spain",
+    "Number of customers": 3
+  },
+  {
+    "Country": "Portugal",
+    "Number of customers": 3
+  }
+]

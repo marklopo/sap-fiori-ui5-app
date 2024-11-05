@@ -1,0 +1,32 @@
+<mvc:View xmlns:table="sap.ui.table"
+	controllerName="app.customers.newproject.controller.Products"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	height="100%">
+	<Page id="page2" title="Products - {i18n>title} ">
+		<content>
+
+			<smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="Products">
+				<smartFilterBar:controlConfiguration>
+					<smartFilterBar:ControlConfiguration id="_IDGenControlConfiguration">
+					</smartFilterBar:ControlConfiguration>
+
+				</smartFilterBar:controlConfiguration>
+			</smartFilterBar:SmartFilterBar>
+
+			<smartTable:SmartTable id="idSmartTable" entitySet="Products"
+				smartFilterId="smartFilterBar"
+				tableType="ResponsiveTable"
+				beforeExport="onBeforeExport" useVariantManagement="false"
+				enableAutoColumnWidth="true"
+				useTablePersonalisation="true" header="Products" showRowCount="true"
+				persistencyKey="SmartTableAnalytical_Explored"
+				enableAutoBinding="true" demandPopin="true" class="sapUiResponsiveContentPadding"
+				showDetailsButton="true" detailsButtonSetting="Medium,Low">
+				<Table id="11" />
+			</smartTable:SmartTable>
+
+		</content>
+	</Page>
+</mvc:View>

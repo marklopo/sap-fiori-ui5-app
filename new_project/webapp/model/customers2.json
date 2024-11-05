@@ -1,0 +1,22 @@
+[
+  {
+    "City": "London",
+    "Number of Customers": 15
+  },
+  {
+    "City": "Berlin",
+    "Number of Customers": 11
+  },
+  {
+    "City": "Madrid",
+    "Number of Customers": 10
+  },
+  {
+    "City": "Paris",
+    "Number of Customers": 8
+  },
+  {
+    "City": "Barcelona",
+    "Number of Customers": 6
+  }
+]

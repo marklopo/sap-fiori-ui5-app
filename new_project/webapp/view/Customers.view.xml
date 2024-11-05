@@ -1,0 +1,96 @@
+<mvc:View
+	controllerName="app.customers.newproject.controller.Customers"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:sfb="sap.ui.comp.smartfilterbar"
+	xmlns:core="sap.ui.core"
+	xmlns:sv="sap.ui.comp.smartvariants"
+	xmlns:m="sap.m"
+	height="100%">
+	<m:Page id="idCustomers"
+		showHeader="true"
+		enableScrolling="true"
+		class="sapUiContentPadding"
+		title="Customers - {i18n>title}"
+	>
+		<m:content>
+			<Table
+				id="table"
+				selectionMode="MultiToggle"
+				rows="{/Customers}"
+				ariaLabelledBy="title"
+			>
+				<columns>
+					<Column
+						id="company"
+						width="11rem"
+						sortProperty="CompanyName">
+						<m:Label id="CompanyName" text="Company Name" />
+						<template>
+							<m:Text id="tCompanyName" text="{CompanyName}" wrapping="false" />
+						</template>
+					</Column>
+
+					<Column
+						id="address"
+						width="11rem"
+						showSortMenuEntry="false"
+					>
+						<m:Label id="Address" text="Address" />
+						<template>
+							<m:Text id="tAddress" text="{Address}" wrapping="false" />
+						</template>
+					</Column>
+					<Column
+						id="city"
+						width="11rem"
+						showSortMenuEntry="false"
+						filterProperty="City">
+						<m:Label id="City" text="City" />
+						<template>
+							<m:Text id="tCity" text="{City}" wrapping="false" />
+						</template>
+					</Column>
+					<Column
+						id="country"
+						width="11rem"
+						showSortMenuEntry="false"
+						filterProperty="Country">
+						<m:Label id="lCountry" text="Country" />
+						<template>
+							<m:Text id="tCountry" text="{Country}" wrapping="false" />
+						</template>
+					</Column>
+
+					<Column
+						id="postalcode"
+						width="11rem"
+						showSortMenuEntry="false"
+					>
+						<m:Label id="PostalCode" text="PostalCode" />
+						<template>
+							<m:Text id="tPostalCode" text="{PostalCode}" wrapping="false" />
+						</template>
+					</Column>
+					<Column
+						id="phone"
+						width="11rem"
+						showSortMenuEntry="false"
+					>
+						<m:Label id="Phone" text="Phone" />
+						<template>
+							<m:Text id="tPhone" text="{Phone}" wrapping="false" />
+						</template>
+					</Column>
+				</columns>
+
+				<footer>
+					<m:OverflowToolbar id="infobar"></m:OverflowToolbar>
+				</footer>
+			</Table>
+
+		</m:content>
+	</m:Page>
+
+</mvc:View>

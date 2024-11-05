@@ -1,0 +1,80 @@
+<mvc:View
+	controllerName="app.customers.newproject.controller.Orders"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:sfb="sap.ui.comp.smartfilterbar"
+	xmlns:core="sap.ui.core"
+	xmlns:sv="sap.ui.comp.smartvariants"
+	xmlns:m="sap.m"
+	height="100%">
+	<m:Page id="idProducts"
+		showHeader="true"
+		enableScrolling="true"
+		class="sapUiContentPadding"
+		title="Orders - {i18n>title}">
+		<m:content>
+			<Table
+				id="table1"
+				selectionMode="MultiToggle"
+				rows="{/Orders}"
+				ariaLabelledBy="title">
+				<columns>
+					<Column
+						id="orders1"
+						width="11rem"
+						sortProperty="OrderID">
+						<m:Label id="lOrderID" text="OrderID" />
+						<template>
+							<m:Text id="tOrderID" text="{OrderID}" wrapping="false" />
+						</template>
+					</Column>
+					<Column
+						id="CustomerID"
+						width="11rem"
+						showSortMenuEntry="false"
+					>
+						<m:Label id="lCustomerID" text="CustomerID" />
+						<template>
+							<m:Text id="tCustomerID" text="{CustomerID}" wrapping="false" />
+						</template>
+					</Column>
+					<Column
+						id="EmployeeID"
+						width="11rem"
+						showSortMenuEntry="false"
+						filterProperty="EmployeeID">
+						<m:Label id="lEmployeeID" text="EmployeeID" />
+						<template>
+							<m:Text id="tEmployeeID" text="{EmployeeID}" wrapping="false" />
+						</template>
+					</Column>
+					<Column
+						id="OrderDate"
+						width="11rem"
+						showSortMenuEntry="false"
+					>
+						<m:Label id="lOrderDate" text="Order Date" />
+						<template>
+							<m:Text id="tOrderDate" text="{OrderDate}" wrapping="false" />
+						</template>
+					</Column>
+					<Column
+						id="ShippedDate"
+						width="11rem"
+						showSortMenuEntry="false"
+					>
+						<m:Label id="lShippedDate" text="ShippedDate" />
+						<template>
+							<m:Text id="tShippedDate" text="{ShippedDate}" wrapping="false" />
+						</template>
+					</Column>
+				</columns>
+				<footer>
+					<m:OverflowToolbar id="_IDGenOverflowToolbar"></m:OverflowToolbar>
+				</footer>
+			</Table>
+		</m:content>
+	</m:Page>
+</mvc:View>

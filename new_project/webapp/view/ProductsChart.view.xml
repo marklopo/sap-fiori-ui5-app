@@ -1,0 +1,120 @@
+<mvc:View controllerName="app.customers.newproject.controller.ProductsChart"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:mc="sap.suite.ui.microchart"
+    displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout"
+    xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds">
+
+
+    <Page id="page"
+        title="Products Statistics - Admin Tool ">
+        <content>
+            <l:BlockLayout
+                id="statisticsBlockLayout"
+                busy="false"
+                background="Dashboard">
+                <l:BlockLayoutRow id="_IDGenBlockLayoutRow"
+                    rowColorSet="ColorSet2">
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell">
+                        <viz:VizFrame id="chartContainer" vizType="area" width="auto"
+                            height="300px"
+                            vizProperties="{ title: {text : 'Inventory turnover ratio per month', visible : true}}"
+                            legendVisible="true" />
+                    </l:BlockLayoutCell>
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell2">
+                        <viz:VizFrame id="chartContainer2" vizType="column" width="auto"
+                            vizProperties="{ title: {text : '5 best-selling products in month', visible : true}}"
+                            legendVisible="true"
+                            height="300px" />
+
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+                <l:BlockLayoutRow id="_IDGenBlockLayoutRow2"
+                    rowColorSet="ColorSet2">
+
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell5">
+                        <Title id="_IDGenTitle10"
+                            text="{i18n>shelves}"
+                            level="H4"
+                            titleStyle="H2"
+                            width="100%" />
+                        <Title id="_IDGenTitle11"
+                            text="{i18n>shelvesOccupied}"
+                            level="H5"
+                            width="100%"
+                            class="sapUiSmallMarginBottom" />
+                        <FlexBox id="_IDGenFlexBox2"
+                            alignItems="Center"
+                            width="12rem"
+                            height="8rem"
+                            renderType="Bare"
+                            direction="Column">
+                            <mc:HarveyBallMicroChart id="_IDGenHarveyBallMicroChart"
+                                total="3000"
+                                totalScale="Qty"
+                                showFractions="true">
+
+                                <mc:items>
+                                    <mc:HarveyBallMicroChartItem
+                                        id="_IaDGenHarveyBallMicroChartItem"
+                                        fraction="1980"
+                                        color="Critical"
+                                        fractionScale="Qty" />
+                                </mc:items>
+                            </mc:HarveyBallMicroChart>
+                        </FlexBox>
+                    </l:BlockLayoutCell>
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell6">
+                        <Title id="_IDGenTitle12"
+                            text="{i18n>damage}"
+                            level="H4"
+                            titleStyle="H2"
+                            width="100%" />
+                        <Title id="_IDGenTitle13"
+                            text="{i18n>damageDesc}"
+                            level="H5"
+                            width="100%"
+                            class="sapUiSmallMarginBottom" />
+                        <FlexBox id="_IDGenFlexBox3"
+                            width="12rem"
+                            height="8rem"
+                            renderType="Bare">
+                            <items>
+                                <mc:RadialMicroChart id="_IDGenRadialMicroChart1"
+                                    percentage="6"
+                                    valueColor="Good" />
+                            </items>
+                        </FlexBox>
+                    </l:BlockLayoutCell>
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell7">
+                        <Title id="_IDGenTitle14"
+                            text="{i18n>numberOfSuppliers}"
+                            level="H4"
+                            titleStyle="H2"
+                            width="400px" />
+                        <Title id="_IDGenTitle15"
+                            text="{i18n>perYear}"
+                            level="H5"
+                            width="100%"
+                            class="sapUiSmallMarginBottom" />
+                        <FlexBox id="_IDGenFlexBox4"
+                            width="20rem"
+                            height="8rem"
+                            alignItems="Center"
+                            renderType="Bare"
+                            direction="Column">
+                            <mc:DeltaMicroChart id="_IDGenDeltaMicroChart1"
+                                value1="36"
+                                value2="45"
+                                title1="{i18n>previousYear}"
+                                title2="{i18n>presentYear}"
+                                deltaDisplayValue="9"
+                                color="Good"
+                                width="14rem" />
+                        </FlexBox>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+
+        </content>
+    </Page>
+
+</mvc:View>

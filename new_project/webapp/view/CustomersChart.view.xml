@@ -1,0 +1,242 @@
+<mvc:View controllerName="app.customers.newproject.controller.CustomersChart"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:mc="sap.suite.ui.microchart"
+    displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:micro="sap.suite.ui.microchart"
+    xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds">
+
+
+    <Page id="page4"
+        title="Customers Statistics - Admin Tool ">
+        <content>
+            <l:BlockLayout
+                id="_IDGenBlockLayout"
+                busy="false"
+                background="Dashboard">
+                <l:BlockLayoutRow id="_IDGenBlockLayoutRow1"
+                    rowColorSet="ColorSet2">
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell1">
+                        <viz:VizFrame id="chartContainer3" vizType="bullet" width="auto"
+                            height="300px"
+                            vizProperties="{ title: {text : 'Customers per country', visible : true}}"
+                            legendVisible="false" />
+                    </l:BlockLayoutCell>
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell3">
+                        <viz:VizFrame id="chartContainer4" vizType="column" width="auto"
+                            vizProperties="{ title: {text : '5 cities with the highest number of customers', visible : true}}"
+                            legendVisible="false"
+                            height="300px" />
+
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+                <l:BlockLayoutRow id="_IDGenBlockLayoutRow3"
+                    rowColorSet="ColorSet2">
+
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell4">
+                        <Title id="_IDGenTitle8"
+                            text="{i18n>metrics}"
+                            level="H4"
+                            titleStyle="H2"
+                            width="100%" />
+                        <Title id="_IDGenTitle9"
+                            text="{i18n>csmPerMonth}"
+                            level="H5"
+                            width="100%"
+                            class="sapUiSmallMarginBottom" />
+                        <FlexBox id="_IDGenFlexBox"
+                            height="7rem"
+                            width="100%"
+                            direction="Column"
+                            renderType="Bare"
+                            alignItems="Center">
+                            <Text id="_IDGenText" text="{i18n>csi}" />
+                            <mc:BulletMicroChart id="_IDGenBulletMicroChart"
+                                targetValue="7">
+
+                                <mc:actual>
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData"
+                                        value="7"
+                                        color="Good" />
+                                </mc:actual>
+                                <mc:thresholds>
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData1"
+                                        value="2"
+                                        color="Error" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData2"
+                                        value="4"
+                                        color="Error" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData3"
+                                        value="6"
+                                        color="Critical" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData4"
+                                        value="8"
+                                        color="Good" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData5"
+                                        value="10"
+                                        color="Good" />
+                                </mc:thresholds>
+                            </mc:BulletMicroChart>
+                            <Text id="_IDGenText2" text="{i18n>ces}" />
+                            <mc:BulletMicroChart id="_IDGenBulletMicroChart1"
+                                targetValue="2">
+                                <mc:actual>
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData6"
+                                        value="2"
+                                        color="Good" />
+                                </mc:actual>
+                                <mc:thresholds>
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData11"
+                                        value="5"
+                                        color="Error" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData7"
+                                        value="4"
+                                        color="Error" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData8"
+                                        value="3"
+                                        color="Critical" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData9"
+                                        value="2"
+                                        color="Good" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData10"
+                                        value="1"
+                                        color="Good" />
+
+                                </mc:thresholds>
+
+                            </mc:BulletMicroChart>
+                            <Text id="_IDGenText1" text="{i18n>crl}" />
+                            <mc:BulletMicroChart id="_IDGenBulletMicroChart2"
+                                targetValue="8">
+                                <mc:actual>
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData13"
+                                        value="9"
+                                        color="Good" />
+                                </mc:actual>
+                                <mc:thresholds>
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData14"
+                                        value="2"
+                                        color="Error" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData15"
+                                        value="4"
+                                        color="Error" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData16"
+                                        value="6"
+                                        color="Critical" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData17"
+                                        value="8"
+                                        color="Good" />
+                                    <mc:BulletMicroChartData id="_IDGenBulletMicroChartData18"
+                                        value="10"
+                                        color="Good" />
+
+                                </mc:thresholds>
+
+                            </mc:BulletMicroChart>
+                        </FlexBox>
+                    </l:BlockLayoutCell>
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell10">
+                        <Title id="_IDGenTitle81"
+                            text="{i18n>metrics}"
+                            level="H4"
+                            titleStyle="H2"
+                            width="100%" />
+                        <Title id="_IDGenTitle91"
+                            text="{i18n>icl}"
+                            level="H5"
+                            width="100%"
+                            class="sapUiSmallMarginBottom" />
+                        <Text id="_IDGenText4" text="Latest Net Promoter Score (NPS) survey" />
+
+                        <FlexBox id="_IDGenFlexBox1" height="70px" width="100%" renderType="Bare">
+                            <micro:StackedBarMicroChart id="_IDGenStackedBarMicroChart"
+                                size="Responsive"
+                                precision="0">
+                                <micro:bars>
+                                    <micro:StackedBarMicroChartBar
+                                        id="_IDGenStackedBarMicroChartBar" valueColor="Error"
+                                        value="15" />
+
+                                    <micro:StackedBarMicroChartBar
+                                        id="_IDGenStackedBarMicroChartBar2" valueColor="Neutral"
+                                        value="40" />
+                                    <micro:StackedBarMicroChartBar
+                                        id="_IDGenStackedBarMicroChartBar3" valueColor="Good"
+                                        value="55" />
+                                </micro:bars>
+                            </micro:StackedBarMicroChart>
+                        </FlexBox>
+
+                        <FlexBox id="_IDGenFlexBox7"
+                            width="12rem"
+                            height="8rem"
+                            renderType="Bare">
+                            <items>
+                                <mc:RadialMicroChart id="_IDGenRadialMicroChart"
+                                    percentage="36"
+                                    valueColor="Good" />
+                            </items>
+                        </FlexBox>
+
+                    </l:BlockLayoutCell>
+
+                    <l:BlockLayoutCell id="_IDGenBlockLayoutCell9">
+                        <Title id="_IDGenTitle"
+                            text="{i18n>metrics}"
+                            level="H4"
+                            titleStyle="H2"
+                            width="100%" />
+                        <Title id="_IDGenTitle1"
+                            text="{i18n>fcr}"
+                            level="H5"
+                            width="100%"
+                            class="sapUiSmallMarginBottom" />
+
+
+                        <FlexBox id="_IDGenFlexBox5" height="100px" width="100%" renderType="Bare">
+                            <micro:LineMicroChart id="_IDGenLineMicroChart" threshold="50"
+                                size="Responsive"
+                                showPoints="true"
+                                showThresholdValue="true"
+                                leftTopLabel="0M" leftBottomLabel="January 1"
+                                thresholdDisplayValue="50%"
+                                rightTopLabel="12M" rightBottomLabel="December 31">
+                                <micro:lines>
+                                    <micro:LineMicroChartLine id="_IDGenLineMicroChartLine">
+                                        <micro:points>
+                                            <micro:LineMicroChartEmphasizedPoint
+                                                id="_IDGenLineMicroChartEmphasizedPoint" x="0"
+                                                y="48"
+                                                color="Error" show="true"
+                                            />
+                                            <micro:LineMicroChartEmphasizedPoint
+                                                id="_IDGenLineMicroChartEmphasizedPoint1" x="2"
+                                                y="54" color="Good" show="true" />
+                                            <micro:LineMicroChartEmphasizedPoint
+                                                id="_IDGenLineMicroChartEmphasizedPoint2" x="4"
+                                                y="60" color="Good" show="true" />
+                                            <micro:LineMicroChartEmphasizedPoint
+                                                id="_IDGenLineMicroChartEmphasizedPoint3" x="6"
+                                                y="45" color="Error" show="true" />
+                                            <micro:LineMicroChartEmphasizedPoint
+                                                id="_IDGenLineMicroChartEmphasizedPoint4" x="8"
+                                                y="55" color="Good" show="true" />
+                                            <micro:LineMicroChartEmphasizedPoint
+                                                id="_IDGenLineMicroChartEmphasizedPoint41" x="10"
+                                                y="41" color="Error" show="true" />
+                                            <micro:LineMicroChartEmphasizedPoint
+                                                id="_IDGenLineMicroChartEmphasizedPoint5" x="12"
+                                                y="53"
+                                                color="Good" show="true" />
+                                        </micro:points>
+                                    </micro:LineMicroChartLine>
+                                </micro:lines>
+                            </micro:LineMicroChart>
+                        </FlexBox>
+
+                    </l:BlockLayoutCell>
+
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+
+        </content>
+    </Page>
+
+</mvc:View>

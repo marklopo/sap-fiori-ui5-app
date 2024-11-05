@@ -1,0 +1,184 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "app.customers.newproject",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "App",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.15.1",
+      "toolsId": ""
+    },
+    "dataSources": {
+      "masterService": {
+        "uri": "/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.129.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "config": {
+      "sample": {
+        "stretch": true,
+        "files": [
+          "model/data.json",
+          "localService/product.xml",
+          "manifest.json"
+        ]
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "app.customers.newproject.i18n.i18n"
+        }
+      },
+
+      "": {
+        "dataSource": "masterService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "app.customers.newproject.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteDash",
+          "pattern": ":?query:",
+          "target": ["TargetDash"]
+        },
+        {
+          "name": "RouteCustomers",
+          "pattern": "customers",
+          "target": ["TargetCustomers"]
+        },
+        {
+          "name": "RouteProducts",
+          "pattern": "products",
+          "target": ["TargetProducts"]
+        },
+        {
+          "name": "RouteOrders",
+          "pattern": "orders",
+          "target": ["TargetOrders"]
+        },
+        {
+          "name": "RouteProductsChart",
+          "pattern": "products_stat",
+          "target": ["TargetProductsChart"]
+        },
+        {
+          "name": "RouteCustomersChart",
+          "pattern": "customers_stat",
+          "target": ["TargetCustomersChart"]
+        }
+      ],
+      "targets": {
+        "TargetDash": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Dash",
+          "viewName": "Dash"
+        },
+        "TargetCustomers": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Customers",
+          "viewName": "Customers"
+        },
+        "TargetProducts": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Products",
+          "viewName": "Products"
+        },
+        "TargetOrders": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Orders",
+          "viewName": "Orders"
+        },
+        "TargetProductsChart": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "ProductsChart",
+          "viewName": "ProductsChart"
+        },
+        "TargetCustomersChart": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CustomersChart",
+          "viewName": "CustomersChart"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "app.customers.newproject.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
