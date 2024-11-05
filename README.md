@@ -3,6 +3,6 @@ The repository contains the code of a sample application written using the Sap F
 
 The application uses the following tools:
 Visual Studio Code and SAP Fiori Tools.
-Source data: https://services.odata.org/V2/Northwind/Northwind.svc/
+Source data: services.odata.org/V2/Northwind/Northwind.svc/
 
 
